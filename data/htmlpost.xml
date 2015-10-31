@@ -23,9 +23,10 @@ and postdata="foo=foo&bar=bar" and xpath="//p"]]></sampleQuery>
     <![CDATA[
       var myRequest = y.rest(url);  
       var data = myRequest.contentType("application/x-www-form-urlencoded; charset=UTF-8").post(postdata).response;
+      var ndata = JSON.parse(data);
       //var xmldata = y.jsonToXml(data);
       var xdata = y.xpath(data,xpath);
-      response.object = <postresult>{data}</postresult>;
+      response.object = <postresult>{ndata}</postresult>;
     ]]>
     </execute>
   </select> 

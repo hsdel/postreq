@@ -26,8 +26,9 @@ and postdata="foo=foo&bar=bar" and xpath="//p"]]></sampleQuery>
       //var mdata = "<html><head></head><body>"+data+"</body></html>";
       //var ndata = JSON.parse(data);
       //var xmldata = y.jsonToXml(data);
-      var xdata = y.xpath(data,xpath);
-      response.object = <postresult>{data}</postresult>;
+      var tdata = y.tidy(data);
+      var xdata = y.xpath(tdata,xpath);
+      response.object = <postresult>{tdata}</postresult>;
     ]]>
     </execute>
   </select> 

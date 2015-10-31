@@ -22,7 +22,7 @@ and postdata="foo=foo&bar=bar" and xpath="//p"]]></sampleQuery>
     <execute>
     <![CDATA[
       var myRequest = y.rest(url);  
-      var data = myRequest.accept('text/html').
+      var data = myRequest.
                  contentType("application/x-www-form-urlencoded; charset=UTF-8").
                  post(postdata).response;
       var xdata = y.xpath(data,xpath);

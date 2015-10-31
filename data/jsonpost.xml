@@ -20,7 +20,7 @@
     <![CDATA[
       var myRequest = y.rest(url);  
       var data = myRequest.accept('application/json').
-                 contentType("application/x-www-form-urlencoded").
+                 contentType("application/x-www-form-urlencoded; charset=UTF-8").
                  post(postdata).response;
      
       response.object = <postresult>{data}</postresult>;
